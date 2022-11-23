@@ -11,16 +11,22 @@ The first occurrence is at index 0, so we return 0.
 """
 
 def strStr(haystack, needle):
-	if needle in haystack:
-		for i in range(0, len(haystack)):
-			j = 0
-			k = i
-			while j < len(needle) and k < len(haystack) and haystack[k] == needle[j]:
-				k += 1
-				j += 1
-			if j >= len(needle):
-				return i
-	else:
+	
+	# if needle in haystack:
+	# 	for i in range(0, len(haystack)):
+	# 		j = 0
+	# 		k = i
+	# 		while j < len(needle) and k < len(haystack) and haystack[k] == needle[j]:
+	# 			k += 1
+	# 			j += 1
+	# 		if j >= len(needle):
+	# 			return i
+	# else:
+	# 	return -1
+
+	if needle in haystack: 
+		return haystack.index(needle)
+	else: 
 		return -1
 
 print(strStr("sadbutsad","sad"))
